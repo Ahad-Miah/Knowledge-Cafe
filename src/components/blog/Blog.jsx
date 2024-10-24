@@ -1,7 +1,7 @@
 
 const Blog = ({blog,handleBookmark,handleTime}) => {
     
-    const{title,author,cover,author_img,posted_date,reading_time}=blog;
+    const{title,author,cover,author_img,posted_date,reading_time,id}=blog;
 
     return (
         <div className="mb-10">
@@ -21,7 +21,7 @@ const Blog = ({blog,handleBookmark,handleTime}) => {
             </div>
             <h1 className="text-4xl font-bold my-4">{title}</h1>
 
-            <button onClick={()=>handleTime(reading_time)}>Mark as read</button>
+            <button className="text-blue-500 my-5 underline" onClick={()=>handleTime(id,reading_time)}>Mark as read</button>
 
             <hr />
 
